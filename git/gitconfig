@@ -1,0 +1,27 @@
+[user]
+	name = MoonFruit
+	email = dkmoonfruit@gmail.com
+[color]
+	ui = auto
+[core]
+	excludesfile= ~/.gitignore
+[merge]
+	tool = vimdiff
+
+[merge "ours"]
+	name = ours merge driver
+	driver = true
+
+[alias]
+	br = branch
+	ci = commit
+	co = checkout
+	di = diff
+	dic = diff --cached
+	glog = log --graph
+	h = help
+	mg = merge
+	rb = rebase
+	ss = stash
+	st = status
+	un = reset HEAD --

@@ -1,0 +1,7 @@
+default:\
+	skip=bin/,etc/,lib/,log/,mak/,manifest/,sbin/,setup/,\
+		polarssl/,tre/,libxml/,activemq4c/,cics_eci.h,cicstype.h,tcpapi.h,\
+		cfcaappapi.h,PBCSign.h,CNAPSmac.h,Datatype.h,ISafeErrorID.h,RHVerifyAPI.h,\
+		sqlite3.h,sqlite3ext.h,sqlite3.c,shell.c,\
+		test/,util_hash_raw.c:\
+	colorize_warned_line=true:
