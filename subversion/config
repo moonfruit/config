@@ -48,7 +48,7 @@
 [helpers]
 ### Set editor-cmd to the command used to invoke your text editor.
 ###   This will override the environment variables that Subversion
-###   examines by default to find this information ($EDITOR, 
+###   examines by default to find this information ($EDITOR,
 ###   et al).
 # editor-cmd = editor (vi, emacs, notepad, etc.)
 ### Set diff-cmd to the absolute path of your 'diff' program.
@@ -138,14 +138,18 @@ enable-auto-props = yes
 ### applied to the file.  Note that auto-props functionality
 ### must be enabled, which is typically done by setting the
 ### 'enable-auto-props' option.
-# *.c = svn:eol-style=native
-# *.cpp = svn:eol-style=native
-# *.h = svn:eol-style=native
-# *.dsp = svn:eol-style=CRLF
-# *.dsw = svn:eol-style=CRLF
-# *.sh = svn:eol-style=native;svn:executable
-# *.txt = svn:eol-style=native
+*.c = svn:keywords=Author Date Id Rev
+*.pc = svn:keywords=Author Date Id Rev
+*.sqc = svn:keywords=Author Date Id Rev
+*.ec = svn:keywords=Author Date Id Rev
+*.cpp = svn:keywords=Author Date Id Rev
+*.h = svn:keywords=Author Date Id Rev
+
+*.sh = svn:keywords=Author Date Id Rev
+*.pl = svn:keywords=Author Date Id Rev
+
+# *.mak = svn:keywords=Author Date Id Rev
+# Makefile = svn:keywords=Author Date Id Rev
+
 # *.png = svn:mime-type=image/png
 # *.jpg = svn:mime-type=image/jpeg
-# Makefile = svn:eol-style=native
-

@@ -6,3 +6,5 @@ ZSH=$HOME/workspace/yyconfig/zsh
 
 bindkey -e
 for zshrc ($ZSH/*.zsh) source $zshrc
+
+rm -f core
