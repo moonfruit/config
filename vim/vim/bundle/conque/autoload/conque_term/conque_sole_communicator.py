@@ -31,11 +31,11 @@
 
 ConqueSoleCommunicator
 
-This script will create a new Windows console and start the requested program 
+This script will create a new Windows console and start the requested program
 inside of it. This process is launched independently from the parent Vim
 program, so it has no access to the vim module.
 
-The main loop in this script reads data from the console and syncs it onto 
+The main loop in this script reads data from the console and syncs it onto
 blocks of memory shared with the Vim process. In this way the Vim process
 and this script can communicate with each other.
 

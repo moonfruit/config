@@ -68,3 +68,5 @@ lftp
 ttyload
 dos2unix
 lighttpd
+global
+gitstats

@@ -68,11 +68,11 @@ to your installed OS.
  * Python 2.3+ and/or 3.x
  * Unix-like OS: Linux, OS X, Solaris, Cygwin, etc
 
-The most common stumbling block is getting a version of Vim which has the 
+The most common stumbling block is getting a version of Vim which has the
 python interface enabled. Most all software package managers will have a copy
-of Vim with Python support, so that is often the easiest way to get it. If 
-you're compiling Vim from source, be sure to use the --enable-pythoninterp 
-option, or --enable-python3interp for Python 3. On OS X the best option is 
+of Vim with Python support, so that is often the easiest way to get it. If
+you're compiling Vim from source, be sure to use the --enable-pythoninterp
+option, or --enable-python3interp for Python 3. On OS X the best option is
 MacVim, which installs with Python support by default.
 
 1.2 Requirements for Windows                             *conque-term-windows*
@@ -81,13 +81,13 @@ MacVim, which installs with Python support by default.
  * Python 2.7 and/or 3.1
  * Modern Windows OS (XP or later)
 
-Conque only officially supports the latest GVim 7.3 Windows installer 
+Conque only officially supports the latest GVim 7.3 Windows installer
 available at www.vim.org. If you are currently using Vim 7.2 or earlier you
 will need to upgrade to 7.3 for Windows support. The Windows installer already
 has the +python/+python3 interface built in.
 
 The official 7.3 release of Vim for Windows only works with Python versions
-2.7 and/or 3.1. You can download and install Python from their website 
+2.7 and/or 3.1. You can download and install Python from their website
 http://www.python.org/download
 
 If you are compiling Vim + Python from source on Windows, the requirements
@@ -122,12 +122,12 @@ Type :ConqueTerm <command> to launch an application in the current buffer. Eg:
 Use :ConqueTermSplit or :ConqueTermVSplit to open Conque in a new horizontal
 or vertical buffer. Use :ConqueTermTab to open Conque in a new tab.
 
-In insert mode you can interact with the shell as you would expect in a 
-normal terminal. All key presses will be sent to the terminal, including 
-control characters. See |conque-term-special-keys| for more information, 
+In insert mode you can interact with the shell as you would expect in a
+normal terminal. All key presses will be sent to the terminal, including
+control characters. See |conque-term-special-keys| for more information,
 particularly regarding the <Esc> key.
 
-In normal mode you can use Vim commands to browse your terminal output and 
+In normal mode you can use Vim commands to browse your terminal output and
 scroll back through the history. Most all Vim functionality will work, such
 as searching, yanking or highlighting text.
 
@@ -160,24 +160,24 @@ See |conque-term-options| for information about configuring these commands.
 If you want to use insert mode to edit the terminal screen, press <F8>. You
 will now be able to edit the terminal output freely without your cursor
 jumping the the active prompt line. This may be useful if you want to reformat
-terminal output for readability. 
+terminal output for readability.
 
 While the terminal is paused new output will not be displayed on the screen
 until you press <F8> again to resume.
 
-You can configure Conque to use a different key with the |ConqueTerm_ToggleKey| 
+You can configure Conque to use a different key with the |ConqueTerm_ToggleKey|
 option.
 
 2.2.3 Sending the <Esc> key press                            *conque-term-esc*
 
 By default if you press the <Esc> key in a Conque buffer you will leave insert
-mode. But what if you want the <Esc> character to be sent to your terminal? 
+mode. But what if you want the <Esc> character to be sent to your terminal?
 There are two options. By default, pressing <Esc> twice will send one <Esc>
-character to the terminal and you will remain in insert mode, while pressing 
+character to the terminal and you will remain in insert mode, while pressing
 it once will leave insert mode.
 
 Alternatively you can use the |ConqueTerm_EscKey| option to choose a
-different key for leaving insert mode. If a custom key is set, then all <Esc> 
+different key for leaving insert mode. If a custom key is set, then all <Esc>
 key presses will be sent to the terminal.
 
 2.3 Registering functions                               *conque-term-register*
@@ -196,8 +196,8 @@ You can set the following options in your .vimrc (default values shown)
 3.1.1 Python version                                    *ConqueTerm_PyVersion*
 
 Conque will work with either Python 2.x or 3.x, assuming the interfaces have
-been installed. By default it will try to use Python 2 first, then will try 
-Python 3. If you want Conque to use Python 3, set this variable to 3. 
+been installed. By default it will try to use Python 2 first, then will try
+Python 3. If you want Conque to use Python 3, set this variable to 3.
 
 Note: even if you set this to 3, if you don't have the python3 interface
 Conque will fall back to using Python 2.
@@ -218,7 +218,7 @@ depending on how many colors are used and how fast the computer is. This
 option allows you to choose how much color support will be enabled.
 
 If set to 0, terminal colors will be disabled. This will allow the terminal to
-render most quickly. Syntax highlighting will still work. For example 
+render most quickly. Syntax highlighting will still work. For example
 highlighting quoted strings or MySQL output.
 
 If set to 1, terminal colors will be enabled, but only for the most recent 200
@@ -241,7 +241,7 @@ By default, Conque buffers are not restored. This is mostly for safety
 reasons; you may not want Vim to automatically re-run a destructive command.
 
 However, if you're not working with missile launch code, and want Vim to
-restart your Conque buffers when you load a session file, set this variable 
+restart your Conque buffers when you load a session file, set this variable
 to 1. Note your original subprocess and shell output will not be restored, but
 the same command will be started in your buffer.
 >
@@ -254,7 +254,7 @@ switched to another buffer.
 
 Note: Conque buffers may continue to update, but they will not scroll down as
 new lines are added beyond the bottom of the visible buffer area. This is a
-limitation of the Vim scripting language for which I haven't found a 
+limitation of the Vim scripting language for which I haven't found a
 workaround.
 >
     let g:ConqueTerm_ReadUnfocused = 1
@@ -269,7 +269,7 @@ normal mode.
 <
 3.1.7 Close buffer when program exits                  *ConqueTerm_CloseOnEnd*
 
-If you want your terminal buffer to be closed and permanently deleted when the 
+If you want your terminal buffer to be closed and permanently deleted when the
 program running inside of it exits, set this option to 1. Otherwise the buffer
 will become a simple text buffer after the program exits, and you can edit the
 program output in insert mode.
@@ -286,7 +286,7 @@ configured incorrectly.
 3.1.9 Regex for highlighting your prompt              *ConqueTerm_PromptRegex*
 
 Use this regular expression for sytax highlighting your terminal prompt. Your
-terminal will generally run faster if you use Vim highlighting instead of 
+terminal will generally run faster if you use Vim highlighting instead of
 terminal colors for your prompt. You can also use it to do more advanced
 syntax highlighting for the prompt line.
 >
@@ -294,7 +294,7 @@ syntax highlighting for the prompt line.
 <
 3.1.10 Choose Vim syntax type                              *ConqueTerm_Syntax*
 
-Set the buffer syntax. The default 'conque' has highlighting for MySQL, but 
+Set the buffer syntax. The default 'conque' has highlighting for MySQL, but
 not much else.
 >
     let g:ConqueTerm_Syntax = 'conque'
@@ -303,7 +303,7 @@ not much else.
 
 3.2.1 The <Esc> key                                        *ConqueTerm_EscKey*
 
-If a custom key is set, then all <Esc> key presses will be sent to the 
+If a custom key is set, then all <Esc> key presses will be sent to the
 terminal and you must use this custom key to leave insert mode. If left to the
 default value of '<Esc>' then you must press it twice to send the escape
 character to the terminal, while pressing it once will leave insert mode.
@@ -405,10 +405,10 @@ Note: Displaying unicode characters on Conque for Windows needs work.
 
 Vim syntax highlighting by coordinate (e.g. the 3-7th characters on the 42nd
 line) can be very slow. If you set this variable to 'conceal', you can use
-the new conceal feature to render terminal colors. Requires Vim 7.3 and only 
-works on the Windows version of Conque. This will make colors render faster, 
-however it will also add hidden characters to the screen, which may be 
-annoying if you're copying and pasting terminal output out of the Conque 
+the new conceal feature to render terminal colors. Requires Vim 7.3 and only
+works on the Windows version of Conque. This will make colors render faster,
+however it will also add hidden characters to the screen, which may be
+annoying if you're copying and pasting terminal output out of the Conque
 buffer. Set this to an empty string '' to disable concealed highlighting.
 >
     let g:ConqueTerm_ColorMode = 'conceal'
@@ -463,9 +463,9 @@ Use the get_instance() function to retrieve an existing terminal object. The
 terminal could have been created either with the user command :ConqueTerm or
 with an API call to conque_term#open() or subprocess().
 
-Use the optional [terminal_number] to retrieve a specific terminal instance. 
+Use the optional [terminal_number] to retrieve a specific terminal instance.
 Otherwise if the current buffer is a Conque terminal, it will be returned,
-else the most recently created terminal. The terminal number is what you see 
+else the most recently created terminal. The terminal number is what you see
 at the end of a terminal buffer name, e.g. "bash - 2".
 
 Returns a Conque terminal object.
@@ -476,7 +476,7 @@ Example:
 <
 4.4 CONQUE_OBJECT.write({text})                            *conque-term-write*
 
-Once you have a terminal object from open(), subprocess() or get_instance() 
+Once you have a terminal object from open(), subprocess() or get_instance()
 you can send text input to it with the write() method.
 
 No return value.
@@ -503,7 +503,7 @@ If you are reading immediately after calling the write() method, you may want
 to wait [timeout] milliseconds for output to be ready.
 
 If you want to prevent the output from being displayed in the terminal buffer,
-set [update_buffer] to 0. This option has no effect if the terminal was 
+set [update_buffer] to 0. This option has no effect if the terminal was
 created with the subprocess() function, since there never is a buffer to
 update.
 
@@ -511,7 +511,7 @@ Returns output string.
 
 Note: The terminal buffer will not automatically scroll down if the new output
 extends beyond the bottom of the visible buffer. Vim doesn't allow "unfocused"
-buffers to be scrolled at the current version, although hopefully this will 
+buffers to be scrolled at the current version, although hopefully this will
 change.
 
 Examples:
@@ -551,7 +551,7 @@ Example:
 4.8 CONQUE_OBJECT.close()                                  *conque-term-close*
 
 Kill your terminal subprocess. Sends the ABORT signal. You probably want to
-close your subprocess in a more graceful manner with the write() method, but 
+close your subprocess in a more graceful manner with the write() method, but
 this can be used when needed. Does not close the terminal buffer, if it
 exists.
 
@@ -572,10 +572,10 @@ executed at several different events. The currently available events are:
   buffer_enter     When you switch to a Conque buffer.
   buffer_leave     When you leave a Conque buffer.
 
-You may use the function conque_term#register_function(event, function_name) 
+You may use the function conque_term#register_function(event, function_name)
 to add additional hooks at a particular event. The second argument should be
-the name of a callback function which has one parameter, the current 
-terminal object (see|conque-term-api|for more about terminal objects). 
+the name of a callback function which has one parameter, the current
+terminal object (see|conque-term-api|for more about terminal objects).
 
 For example:
 >
@@ -597,7 +597,7 @@ For example:
       if a:term.program_name == 'bash'
           call a:term.writeln('svn up ~/projects/*')
       endif
-      
+
   endfunction
 
   call conque_term#register_function('after_startup', 'MyConqueStartup')
@@ -616,22 +616,22 @@ The following are known limitations:
    color in your shell, set g:ConqueTerm_Color = 0 in your .vimrc
  - Conque only supports the extended ASCII character set for input, not utf-8.
  - VT100 escape sequence support is not complete.
- - Alt/Meta key support in Vim isn't great in general, and conque is no 
-   exception. Pressing <Esc><Esc>x or <Esc><M-x> instead of <M-x> works in 
+ - Alt/Meta key support in Vim isn't great in general, and conque is no
+   exception. Pressing <Esc><Esc>x or <Esc><M-x> instead of <M-x> works in
    most cases.
 
 
 5.2 Contribute                                        *conque-term-contribute*
 
-The two contributions most in need are improvements to Vim itself. I currently 
+The two contributions most in need are improvements to Vim itself. I currently
 use hacks to capture key press input from the user, and to poll the terminal
-for more output. The Vim todo.txt document lists proposed improvements to give 
-users this behavior without hacks. Having a key press event should allow 
-Conque to work with multi- byte input. If you are a Vim developer, please 
-consider prioritizing these two items: 
+for more output. The Vim todo.txt document lists proposed improvements to give
+users this behavior without hacks. Having a key press event should allow
+Conque to work with multi- byte input. If you are a Vim developer, please
+consider prioritizing these two items:
 
  - todo.txt (Autocommands, line ~3137)
-     8   Add an event like CursorHold that is triggered repeatedly, not just 
+     8   Add an event like CursorHold that is triggered repeatedly, not just
          once after typing something.
 
 

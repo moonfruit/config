@@ -14,9 +14,9 @@ conf-available/
         build as nn-name.conf where "nn" is two digit number (number
 	is used to find order for loading files)
 
-conf-enabled/	  
-	To actually enable a module for lighttpd, it is necessary to create a 
+conf-enabled/
+	To actually enable a module for lighttpd, it is necessary to create a
         symlink in this directory to the .conf file in conf-available/.
 
 Enabling and disabling modules could be done by provided
-/usr/sbin/lighty-enable-mod and /usr/sbin/lighty-disable-mod scripts. 
+/usr/sbin/lighty-enable-mod and /usr/sbin/lighty-disable-mod scripts.

@@ -30,9 +30,9 @@
 """
 ConqueScreen is an extention of the vim.current.buffer object
 
-Unix terminal escape sequences usually reference line numbers relative to the 
+Unix terminal escape sequences usually reference line numbers relative to the
 top of the visible screen. However the visible portion of the Vim buffer
-representing the terminal probably doesn't start at the first line of the 
+representing the terminal probably doesn't start at the first line of the
 buffer.
 
 The ConqueScreen class allows access to the Vim buffer with screen-relative

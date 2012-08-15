@@ -288,7 +288,7 @@ MzScheme 接口						*new-MzScheme*
 用 'tabpagemax' 设置可打开的最大标签页数。
 
 标签页标签所在的行可以使用高亮的普通文本，也可以使用 GUI 的机制。GUI 标签看起
-来更舒服，但只有少数系统支持。用 'tabline'、'guitablabel' 和 'guitabtooltip' 
+来更舒服，但只有少数系统支持。用 'tabline'、'guitablabel' 和 'guitabtooltip'
 可以定制标签页行，而它显示与否则由 'showtabline' 控制。至于是否使用 GUI 标签由
 'guioptions' 的 "e" 标志位决定。
 
@@ -3965,7 +3965,7 @@ Patch 7.0.173
 问题:       ":call f().TT()" doesn't work.  (Richard Emberson)
 解决方案:   When a function returns a Dictionary or another composite continue
 	    evaluating what follows.
-相关文件:   src/eval.c    
+相关文件:   src/eval.c
 
 Patch 7.0.174
 问题:       ":mksession" doesn't restore window layout correctly in tab pages
@@ -4079,7 +4079,7 @@ Patch 7.0.192
 	    that not all blocks are loaded into memory, causing ml_get errors
 	    later.
 解决方案:   Rename "dont_release" to "mf_dont_release" and also use it to
-	    avoid using the cached line and locked block. 
+	    avoid using the cached line and locked block.
 相关文件:   src/globals.h, src/memfile.c, src/memline.c
 
 Patch 7.0.193
@@ -5838,7 +5838,7 @@ Patch 7.1.206
 相关文件:   src/version.c
 
 Patch 7.1.207
-问题:	    Netbeans: "remove" cannot delete one line. 
+问题:	    Netbeans: "remove" cannot delete one line.
 解决方案:   Remove partial lines and whole lines properly.  Avoid a memory
 	    leak.  (Xavier de Gaye)
 相关文件:   src/netbeans.c
@@ -7786,7 +7786,7 @@ Patch 7.2.096
 
 Patch 7.2.097
 问题:	    "!xterm&" doesn't work when 'shell' is "bash".
-解决方案:   Ignore SIGHUP after calling setsid(). (Simon Schubert) 
+解决方案:   Ignore SIGHUP after calling setsid(). (Simon Schubert)
 相关文件:   src/os_unix.c
 
 Patch 7.2.098
@@ -8535,7 +8535,7 @@ Patch 7.2.221
 	    src/ui.c
 
 Patch 7.2.222
-问题:	   ":mksession" doesn't work properly with 'acd' set. 
+问题:	   ":mksession" doesn't work properly with 'acd' set.
 解决方案:   Make it work. (Yakov Lerner)
 相关文件:   src/ex_docmd.c
 
@@ -8945,7 +8945,7 @@ Patch 7.2.292
 相关文件:   src/ops.c
 
 Patch 7.2.293
-问题:	    When setting 'comments' option it may be used in a wrong way. 
+问题:	    When setting 'comments' option it may be used in a wrong way.
 解决方案:   Don't increment after skipping over digets. (Yukihiro Nakadaira)
 相关文件:   src/misc1.c
 
@@ -9952,5 +9952,5 @@ an error.  Was caused by patch 7.2.132.
 
 Make the references to features in the help more consistent. (Sylvain Hitier)
 
- 
+
  vim:tw=78:ts=8:ft=help:norl:

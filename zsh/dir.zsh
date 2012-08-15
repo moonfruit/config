@@ -1,10 +1,16 @@
 #!/usr/bin/zsh
 
-hash -d DOWNLOAD=~/download
-hash -d WORKSPACE=~/workspace
+export  DOWNLOAD="$HOME/download"
+hash -d DOWNLOAD="$DOWNLOAD"
 
-hash -d CONFIG=~WORKSPACE/config
+export  WORKSPACE="$HOME/workspace"
+hash -d WORKSPACE="$WORKSPACE"
 
-hash -d APP=~WORKSPACE/app
+export  CONFIG="$WORKSPACE/config"
+hash -d CONFIG="$CONFIG"
 
-hash -d UFRAME=~APP/prods/uframe
+export  APP="$WORKSPACE/app"
+hash -d APP="$APP"
+
+export  UFRAME="$APP/prods/uframe"
+hash -d UFRAME="$UFAME"

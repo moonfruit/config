@@ -131,7 +131,7 @@ class ConqueSoleSharedMemory():
     def read(self, chars=1, start=0):
         """ Read data from shared memory.
 
-        If this is a fixed length block, read 'chars' characters from memory. 
+        If this is a fixed length block, read 'chars' characters from memory.
         Otherwise read up until the TERMINATOR character (null byte).
         If this memory is serialized, unserialize it automatically.
 

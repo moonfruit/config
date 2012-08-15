@@ -489,9 +489,9 @@ class ConqueSoleSubprocess():
 
 
     def write(self):
-        """ Write text to console. 
+        """ Write text to console.
 
-        This function just parses out special sequences for special key events 
+        This function just parses out special sequences for special key events
         and passes on the text to the plain or virtual key functions.
 
         """

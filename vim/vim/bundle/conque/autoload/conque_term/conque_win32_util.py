@@ -53,7 +53,7 @@ EXTENDED_STARTUPINFO_PRESENT = 0x00080000
 INHERIT_PARENT_AFFINITY = 0x00010000
 
 
-# process priority constants 
+# process priority constants
 
 ABOVE_NORMAL_PRIORITY_CLASS = 0x00008000
 BELOW_NORMAL_PRIORITY_CLASS = 0x00004000
@@ -63,7 +63,7 @@ NORMAL_PRIORITY_CLASS = 0x00000020
 REALTIME_PRIORITY_CLASS = 0x00000100
 
 
-# startup info constants 
+# startup info constants
 
 STARTF_FORCEONFEEDBACK = 0x00000040
 STARTF_FORCEOFFFEEDBACK = 0x00000080
@@ -80,7 +80,7 @@ STARTF_USESIZE = 0x00000002
 STARTF_USESTDHANDLES = 0x00000100
 
 
-# show window constants 
+# show window constants
 
 SW_FORCEMINIMIZE = 11
 SW_HIDE = 0
@@ -97,7 +97,7 @@ SW_SHOWNOACTIVATE = 4
 SW_SHOWNORMAL = 1
 
 
-# input event types 
+# input event types
 
 FOCUS_EVENT = 0x0010
 KEY_EVENT = 0x0001
@@ -106,7 +106,7 @@ MOUSE_EVENT = 0x0002
 WINDOW_BUFFER_SIZE_EVENT = 0x0004
 
 
-# key event modifiers 
+# key event modifiers
 
 CAPSLOCK_ON = 0x0080
 ENHANCED_KEY = 0x0100
@@ -119,7 +119,7 @@ SCROLLLOCK_ON = 0x0040
 SHIFT_PRESSED = 0x0010
 
 
-# process access 
+# process access
 
 PROCESS_CREATE_PROCESS = 0x0080
 PROCESS_CREATE_THREAD = 0x0002
@@ -135,7 +135,7 @@ PROCESS_VM_READ = 0x0010
 PROCESS_VM_WRITE = 0x0020
 
 
-# input / output handles 
+# input / output handles
 
 STD_INPUT_HANDLE = c_ulong(-10)
 STD_OUTPUT_HANDLE = c_ulong(-11)
@@ -275,7 +275,7 @@ CONQUE_WINDOWS_VK_ENHANCED = {
 
 # structures used for CreateProcess
 
-# Odd types 
+# Odd types
 
 LPBYTE = POINTER(c_ubyte)
 LPTSTR = POINTER(c_char)

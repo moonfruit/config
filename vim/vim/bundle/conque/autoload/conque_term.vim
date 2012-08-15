@@ -5,20 +5,20 @@
 " VERSION:  2.2, for Vim 7.0
 " LICENSE:
 " Conque - Vim terminal/console emulator
-" Copyright (C) 2009-__YEAR__ Nico Raffo 
+" Copyright (C) 2009-__YEAR__ Nico Raffo
 "
 " MIT License
-" 
+"
 " Permission is hereby granted, free of charge, to any person obtaining a copy
 " of this software and associated documentation files (the "Software"), to deal
 " in the Software without restriction, including without limitation the rights
 " to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 " copies of the Software, and to permit persons to whom the Software is
 " furnished to do so, subject to the following conditions:
-" 
+"
 " The above copyright notice and this permission notice shall be included in
 " all copies or substantial portions of the Software.
-" 
+"
 " THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 " IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 " FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -518,7 +518,7 @@ function! conque_term#open(...) "{{{
         return 0
     endtry
 
-    " set key mappings and auto commands 
+    " set key mappings and auto commands
     if is_buffer
         call conque_term#set_mappings('start')
     endif
@@ -540,7 +540,7 @@ endfunction "}}}
 
 " open(), but no buffer
 function! conque_term#subprocess(command) " {{{
-    
+
     let t_obj = conque_term#open(a:command, [], 0, 0)
     if !exists('b:ConqueTerm_Var')
         call conque_term#on_blur()
@@ -559,7 +559,7 @@ function! conque_term#set_buffer_settings(command, vim_startup_commands) "{{{
     endfor
     sil exe 'edit ++enc=utf-8 ' . g:ConqueTerm_BufName
 
-    " buffer settings 
+    " buffer settings
     setlocal fileencoding=utf-8 " file encoding, even tho there's no file
     setlocal nopaste           " conque won't work in paste mode
     setlocal buftype=nofile    " this buffer is not a file, you can't save it
@@ -968,7 +968,7 @@ function! conque_term#on_focus(...) " {{{
     if s:NeoComplCache_WasEnabled == 2
         NeoComplCacheLock
     endif
- 
+
     if g:ConqueTerm_ReadUnfocused == 1
         autocmd! ConqueTerm CursorHoldI *
         autocmd! ConqueTerm CursorHold *
@@ -1355,7 +1355,7 @@ function! s:term_obj.read(...) dict " {{{
     let read_time = get(a:000, 0, 1)
     let update_buffer = get(a:000, 1, self.is_buffer)
 
-    if update_buffer 
+    if update_buffer
         let up_py = 'True'
     else
         let up_py = 'False'
@@ -1468,7 +1468,7 @@ function! conque_term#get_instance(...) " {{{
     let buf_num = get(a:000, 0, 0)
 
     if exists('g:ConqueTerm_Terminals[buf_num]')
-        
+
     elseif exists('b:ConqueTerm_Var')
         let buf_num = b:ConqueTerm_Idx
     else

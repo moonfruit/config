@@ -66,7 +66,7 @@ class ConqueSole(Conque):
         options - Dictionary of config options
         python_exe - Path to the python.exe executable. Usually C:\PythonXX\python.exe
         communicator_py - Path to subprocess controller script in user's vimfiles directory
-      
+
         """
         # get arguments
         command = vim.eval('command')
@@ -223,7 +223,7 @@ class ConqueSole(Conque):
         # handle line offset
         line_nr += self.offset
 
-        self.l = line_nr + 1 
+        self.l = line_nr + 1
 
         # remove trailing whitespace
         text = text.rstrip()

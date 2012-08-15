@@ -1,4 +1,4 @@
-# FILE:     autoload/conque_term/conque.py 
+# FILE:     autoload/conque_term/conque.py
 # AUTHOR:   Nico Raffo <nicoraffo@gmail.com>
 # WEBSITE:  http://conque.googlecode.com
 # MODIFIED: 2011-08-12
@@ -30,7 +30,7 @@
 """
 Vim terminal emulator.
 
-This class is the main interface between Vim and the terminal application. It 
+This class is the main interface between Vim and the terminal application. It
 handles both updating the Vim buffer with new output and accepting new keyboard
 input from the Vim user.
 
@@ -115,7 +115,7 @@ class Conque:
     input_buffer = []
 
     def open(self):
-        """ Start program and initialize this instance. 
+        """ Start program and initialize this instance.
 
         Arguments:
         command -- Command string to execute, e.g. '/bin/bash --login'
@@ -155,7 +155,7 @@ class Conque:
 
 
     def write(self, input, set_cursor=True, read=True):
-        """ Write a unicode string to the subprocess. 
+        """ Write a unicode string to the subprocess.
 
         set_cursor -- Position the cursor in the current buffer when finished
         read -- Check program for new output when finished
@@ -181,7 +181,7 @@ class Conque:
             self.write(unichr(input), set_cursor, read)
         else:
             self.write(chr(input), set_cursor, read)
-        
+
 
 
     def write_expr(self, expr, set_cursor=True, read=True):
@@ -275,7 +275,7 @@ class Conque:
 
 
 
-                    # Check for control character match 
+                    # Check for control character match
                     if CONQUE_SEQ_REGEX_CTL.match(s[0]):
 
                         nr = ord(s[0])
@@ -285,7 +285,7 @@ class Conque:
 
                             pass
 
-                    # check for escape sequence match 
+                    # check for escape sequence match
                     elif CONQUE_SEQ_REGEX_CSI.match(s):
 
                         if s[-1] in CONQUE_ESCAPE:
@@ -296,12 +296,12 @@ class Conque:
 
                             pass
 
-                    # check for title match 
+                    # check for title match
                     elif CONQUE_SEQ_REGEX_TITLE.match(s):
 
                         self.change_title(s[2], s[4:-1])
 
-                    # check for hash match 
+                    # check for hash match
                     elif CONQUE_SEQ_REGEX_HASH.match(s):
 
                         if s[-1] in CONQUE_ESCAPE_HASH:
@@ -310,7 +310,7 @@ class Conque:
 
                             pass
 
-                    # check for charset match 
+                    # check for charset match
                     elif CONQUE_SEQ_REGEX_CHAR.match(s):
 
                         if s[-1] in CONQUE_ESCAPE_CHARSET:
@@ -319,7 +319,7 @@ class Conque:
 
                             pass
 
-                    # check for other escape match 
+                    # check for other escape match
                     elif CONQUE_SEQ_REGEX_ESC.match(s):
 
                         if s[-1] in CONQUE_ESCAPE_PLAIN:
@@ -328,7 +328,7 @@ class Conque:
 
                             pass
 
-                    # else process plain text 
+                    # else process plain text
                     else:
                         self.plain_text(s)
 
@@ -356,7 +356,7 @@ class Conque:
 
 
     def auto_read(self):
-        """ Poll program for more output. 
+        """ Poll program for more output.
 
         Since Vim doesn't have a reliable event system that can be triggered when new
         output is available, we have to continually poll the subprocess instead. This
@@ -416,10 +416,10 @@ class Conque:
     def plain_text(self, input):
         """ Write text output to Vim buffer.
 
-  
+
         This method writes a string of characters without any control characters or escape sequences
         to the Vim buffer. In simple terms, it writes the input string to the buffer starting at the
-        current cursor position, wrapping the text to a new line if needed. It also triggers the 
+        current cursor position, wrapping the text to a new line if needed. It also triggers the
         terminal coloring methods if needed.
 
 
@@ -487,14 +487,14 @@ class Conque:
 
 
     def apply_color(self, start, end, line=0):
-        """ Apply terminal colors to buffer for a range of characters in a single line. 
+        """ Apply terminal colors to buffer for a range of characters in a single line.
 
         When a text attribute escape sequence is encountered during input processing, the
         attributes are recorded in the dictionary self.color_changes. After those attributes
         have been applied, the changes are recorded in a second dictionary self.color_history.
 
-  
-        This method inspects both dictionaries to calculate any syntax highlighting 
+
+        This method inspects both dictionaries to calculate any syntax highlighting
         that needs to be executed to render the text attributes in the Vim buffer.
 
 
@@ -606,7 +606,7 @@ class Conque:
 
 
     ###############################################################################################
-    # Control functions 
+    # Control functions
 
     def ctl_nl(self):
         """ Process the newline control character. """
@@ -669,7 +669,7 @@ class Conque:
 
 
     ###############################################################################################
-    # CSI functions 
+    # CSI functions
 
     def csi_font(self, csi):
         """ Process the text attribute escape sequence. """
@@ -937,7 +937,7 @@ class Conque:
 
 
     ###############################################################################################
-    # ESC functions 
+    # ESC functions
 
     def esc_scroll_up(self):
         self.ctl_nl()
@@ -969,7 +969,7 @@ class Conque:
 
 
     ###############################################################################################
-    # HASH functions 
+    # HASH functions
 
     def hash_screen_alignment_test(self):
         self.csi_clear_screen(self.parse_csi('2J'))
@@ -980,7 +980,7 @@ class Conque:
 
 
     ###############################################################################################
-    # CHARSET functions 
+    # CHARSET functions
 
     def charset_us(self):
         self.character_set = 'ascii'
@@ -994,12 +994,12 @@ class Conque:
 
 
     ###############################################################################################
-    # Random stuff 
+    # Random stuff
 
     def set_cursor(self, line, col):
         """ Set cursor position in the Vim buffer.
 
-        Note: the line and column numbers are relative to the top left corner of the 
+        Note: the line and column numbers are relative to the top left corner of the
         visible screen. Not the line number in the Vim buffer.
 
         """
@@ -1083,7 +1083,7 @@ class Conque:
 
 
     ###############################################################################################
-    # Utility 
+    # Utility
 
     def parse_csi(self, s):
         """ Parse an escape sequence into it's meaningful values. """

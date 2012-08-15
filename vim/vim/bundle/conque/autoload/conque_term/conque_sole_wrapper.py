@@ -1,4 +1,4 @@
-# FILE:     autoload/conque_term/conque_sole_wrapper.py 
+# FILE:     autoload/conque_term/conque_sole_wrapper.py
 # AUTHOR:   Nico Raffo <nicoraffo@gmail.com>
 # WEBSITE:  http://conque.googlecode.com
 # MODIFIED: 2011-08-12
@@ -27,7 +27,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-""" 
+"""
 
 ConqueSoleSubprocessWrapper
 
@@ -114,7 +114,7 @@ class ConqueSoleWrapper():
 
 
     def read(self, start_line, num_lines, timeout=0):
-        """ Read a range of console lines from shared memory. 
+        """ Read a range of console lines from shared memory.
 
         Returns a pair of lists containing the console text and console text attributes.
 
