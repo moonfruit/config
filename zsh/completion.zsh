@@ -13,7 +13,7 @@ zmodload -i zsh/complist
 
 #自动补全缓存
 zstyle ':completion::complete:*' use-cache on
-zstyle ':completion::complete:*' cache-path .zcache
+zstyle ':completion::complete:*' cache-path ~/.zcache
 zstyle ':completion:*:cd:*' ignore-parents parent pwd
 
 #自动补全选项
@@ -64,28 +64,32 @@ zstyle ':completion:*:warnings' format $'\e[01;31m -- No Matches Found --\e[0m'
 [ -r ~/.ssh/known_hosts ] && _ssh_hosts=(${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[\|]*}%%\ *}%%,*}) || _ssh_hosts=()
 [ -r /etc/hosts ] && : ${(A)_etc_hosts:=${(s: :)${(ps:\t:)${${(f)~~"$(</etc/hosts)"}%%\#*}##[:blank:]#[^[:blank:]]#}}} || _etc_hosts=()
 hosts=(
-  "$_global_ssh_hosts[@]"
-  "$_ssh_hosts[@]"
-  "$_etc_hosts[@]"
-  "$HOST"
-  localhost
+	"$_global_ssh_hosts[@]"
+	"$_ssh_hosts[@]"
+	"$_etc_hosts[@]"
+	"$HOST"
+	localhost
 )
 zstyle ':completion:*:hosts' hosts $hosts
 
 # Don't complete uninteresting users
 zstyle ':completion:*:*:*:users' ignored-patterns \
-        adm amanda apache avahi beaglidx bin cacti canna clamav daemon \
-        dbus distcache dovecot fax ftp games gdm gkrellmd gopher \
-        hacluster haldaemon halt hsqldb ident junkbust ldap lp mail \
-        mailman mailnull mldonkey mysql nagios \
-        named netdump news nfsnobody nobody nscd ntp nut nx openvpn \
-        operator pcap postfix postgres privoxy pulse pvm quagga radvd \
-        rpc rpcuser rpm shutdown squid sshd sync uucp vcsa xfs
+		adm amanda apache avahi beaglidx bin cacti canna clamav daemon \
+		dbus distcache dovecot fax ftp games gdm gkrellmd gopher \
+		hacluster haldaemon halt hsqldb ident junkbust ldap lp mail \
+		mailman mailnull mldonkey mysql nagios \
+		named netdump news nfsnobody nobody nscd ntp nut nx openvpn \
+		operator pcap postfix postgres privoxy pulse pvm quagga radvd \
+		rpc rpcuser rpm shutdown squid sshd sync uucp vcsa xfs \
+		\
+		avahi-autoipd gnats kernoops list rtkit sys whoopsie \
+		backup hplip libuuid man proxy saned syslog www-data \
+		colord irc lightdm messagebus root speech-dispatcher usbmux \
 
 # cd
 user-cd-complete()
 {
-    if [[ -n $BUFFER ]] ; then
+	if [[ -n $BUFFER ]] ; then
 		zle expand-or-complete
 	else
 		BUFFER="cd "
@@ -99,8 +103,8 @@ bindkey "\t" user-cd-complete
 # sudo
 sudo-command-line()
 {
-    [[ -z $BUFFER ]] && zle up-history
-    [[ $BUFFER != sudo\ * ]] && BUFFER="sudo $BUFFER"
-    zle end-of-line
+	[[ -z $BUFFER ]] && zle up-history
+	[[ $BUFFER != sudo\ * ]] && BUFFER="sudo $BUFFER"
+	zle end-of-line
 }
 zle -N sudo-command-line

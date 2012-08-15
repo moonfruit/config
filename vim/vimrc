@@ -100,7 +100,7 @@ set fillchars=vert:\
 set showmatch
 
 " map F2 to switch off highlighting for search
-nmap <F2> :nohlsearch<CR>
+nmap <silent> <F2> :nohlsearch<CR>
 
 " map space to control folding
 set foldenable
@@ -114,7 +114,7 @@ noremap! <M-h> <left>
 noremap! <M-l> <Right>
 
 " statusline
-" set laststatus=2
+set laststatus=2
 highlight User1 term=inverse,bold cterm=inverse,bold ctermfg=red
 set statusline=%f\ %1*%m%*%<%h%w%r%y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}%=%-9.([%03b]%)%-10.([0x%02B]%)%-19.(%-13.(%l,%c%V%)\ %P%)
 

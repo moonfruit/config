@@ -2,7 +2,7 @@
 
 [ -z "$PS1" ] && return
 
-ZSH=$HOME/workspace/yyconfig/zsh
+ZSH=$HOME/workspace/config/zsh
 
 bindkey -e
 for zshrc ($ZSH/*.zsh) source $zshrc

@@ -45,3 +45,5 @@ vman()
 	       -c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\"" man $*
 }
 alias man="TERMINFO=~/.terminfo/ LESS=C TERM=mostlike PAGER=less man"
+
+alias dstat='dstat -cdlmnpsy'

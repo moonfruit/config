@@ -11,6 +11,8 @@ tags
 .hg
 CVS
 *.o
+*.a
+*.so
 *.pyc
 *.tmp
 *.log
