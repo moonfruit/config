@@ -2,6 +2,13 @@
 
 [ -f /etc/zsh_command_not_found ] && . /etc/zsh_command_not_found
 
+#if [ ! -z "$PUTTY" ]; then
+#	RPROMPT=$(echo '%{\033[31m%}%D %T%{\033[m%}')
+#	PROMPT=$(echo '%{\e]0;%n@%m:%~\a%}%{\033[34m%}%M%{\033[00m%}:%{\033[32m%}%~
+#%{\033[36m%}%n %{\033[01;31m%}>%{\033[33m%}>%{\033[34m%}>%{\033[m%} ')
+#	return
+#fi
+
 function precmd {
     local TERMWIDTH
     (( TERMWIDTH = ${COLUMNS} - 1 ))

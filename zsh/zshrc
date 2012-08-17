@@ -2,6 +2,10 @@
 
 [ -z "$PS1" ] && return
 
+if [ ! -z "$PUTTY" ]; then
+	export LANG=zh_CN.GBK
+fi
+
 ZSH=$HOME/workspace/config/zsh
 
 bindkey -e

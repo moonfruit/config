@@ -70,3 +70,6 @@ dos2unix
 lighttpd
 global
 gitstats
+iptraf
+socat
+netpipes
