@@ -1,10 +1,13 @@
 [user]
 	name = MoonFruit
 	email = dkmoonfruit@gmail.com
+
 [color]
 	ui = auto
+
 [core]
 	excludesfile= ~/.gitignore
+
 [merge]
 	tool = vimdiff
 

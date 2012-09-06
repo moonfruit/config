@@ -73,3 +73,12 @@ gitstats
 iptraf
 socat
 netpipes
+libtext-csv-encoded-perl
+libtext-csv-perl
+libtext-csv-xs-perl
+eperl
+libsvn-notify-perl
+uchardet
+libuchardet-dev
+alien
+sharutils
