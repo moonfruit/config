@@ -87,7 +87,7 @@ set display=lastline
 colorscheme evening
 
 set path+=~/workspace/app/uframe/include
-set tags=tags;
+set tags+=.tags;
 set fileencodings=ucs-bom,utf-8,default,cp936,latin1
 set title
 set titlelen=32

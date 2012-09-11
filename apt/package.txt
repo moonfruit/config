@@ -22,6 +22,7 @@ libexpat-dev
 libxml2-dev
 openssl
 libssl-dev
+libssl-doc
 sqlite3
 libsqlite3-dev
 unrar
@@ -82,3 +83,4 @@ uchardet
 libuchardet-dev
 alien
 sharutils
+expect
