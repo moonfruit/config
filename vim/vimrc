@@ -21,6 +21,7 @@ set history=50		" keep 50 lines of command line history
 set ruler			" show the cursor position all the time
 set showcmd			" display incomplete commands
 set incsearch		" do incremental searching
+set vb t_vb=        " no beep
 
 " pathogen
 call pathogen#infect()
@@ -88,7 +89,7 @@ colorscheme evening
 
 set path+=~/workspace/app/uframe/include
 set tags+=.tags;
-set fileencodings=ucs-bom,utf-8,default,cp936,latin1
+set fileencodings=ucs-bom,utf-8,cp936,default
 set title
 set titlelen=32
 " set titleold

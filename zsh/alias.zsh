@@ -35,7 +35,7 @@ alias cls='clear'
 alias so='source'
 
 alias diff='colordiff'
-alias tail='tail'
+#alias tail='tail'
 
 vman()
 {

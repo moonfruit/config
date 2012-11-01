@@ -84,3 +84,8 @@ libuchardet-dev
 alien
 sharutils
 expect
+libstdc++5
+kwstyle
+astyle
+tcc
+apcalc
