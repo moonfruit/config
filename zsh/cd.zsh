@@ -1,3 +1,7 @@
+#!/usr/bin/zsh
+
+[ -z "$PS1" ] && return
+
 # Changing/making/removing directory
 # setopt auto_name_dirs
 setopt auto_pushd

@@ -1,7 +1,5 @@
 #!/usr/bin/zsh
 
-[ -z "$PS1" ] && return
-
 if [ ! -z "$PUTTY" ]; then
 	export LANG=zh_CN.GBK
 fi

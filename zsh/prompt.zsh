@@ -1,5 +1,7 @@
 #!/usr/bin/zsh
 
+[ -z "$PS1" ] && return
+
 [ -f /etc/zsh_command_not_found ] && . /etc/zsh_command_not_found
 
 #if [ ! -z "$PUTTY" ]; then

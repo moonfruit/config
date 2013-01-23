@@ -1,5 +1,7 @@
 #!/usr/bin/zsh
 
+[ -z "$PS1" ] && return
+
 unsetopt menu_complete   # do not autoselect the first completion entry
 unsetopt flowcontrol
 setopt auto_list

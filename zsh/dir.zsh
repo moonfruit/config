@@ -9,11 +9,17 @@ hash -d WORKSPACE="$WORKSPACE"
 export  CONFIG="$WORKSPACE/config"
 hash -d CONFIG="$CONFIG"
 
-export  APP="$WORKSPACE/app"
+export  DEV="$WORKSPACE/app"
+hash -d DEV="$DEV"
+
+export  APP="$DEV"
 hash -d APP="$APP"
 
-export  DEV="$APP"
-hash -d DEV="$DEV"
+export  VAR="$APP/var"
+hash -d VAR="$VAR"
+
+export  VARLOG="$VAR/log"
+hash -d VARLOG="$VARLOG"
 
 export  UFRAME="$APP/prods/uframe"
 hash -d UFRAME="$UFRAME"

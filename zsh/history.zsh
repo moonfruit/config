@@ -1,3 +1,7 @@
+#!/usr/bin/zsh
+
+[ -z "$PS1" ] && return
+
 ## Command history configuration
 HISTFILE=$HOME/.zhistory
 HISTSIZE=10000

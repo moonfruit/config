@@ -1,5 +1,7 @@
 #!/usr/bin/zsh
 
+[ -z "$PS1" ] && return
+
 # enviroment
 [ -x /usr/bin/dircolors ] && eval "$(dircolors)"
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
