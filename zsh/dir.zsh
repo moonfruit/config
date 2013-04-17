@@ -3,6 +3,12 @@
 export  DOWNLOAD="$HOME/download"
 hash -d DOWNLOAD="$DOWNLOAD"
 
+export  DROPBOX="$HOME/dropbox"
+hash -d DROPBOX="$DROPBOX"
+
+export  VM="$HOME/vmshare"
+hash -d VM="$VM"
+
 export  WORKSPACE="$HOME/workspace"
 hash -d WORKSPACE="$WORKSPACE"
 
@@ -38,3 +44,10 @@ hash -d OTHER="$OTHER"
 
 export  YY="$APP/prods/yy"
 hash -d YY="$YY"
+
+dev() {
+	cd ~DEV
+	if [ -z "$APP_HOME" ]; then
+		source env
+	fi
+}

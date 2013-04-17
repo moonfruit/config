@@ -18,6 +18,7 @@ alias -g ls='ls -Fh --color=auto'
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ll'
+alias tree='tree -F'
 
 alias cp='cp -i'
 alias mv='mv -i'
@@ -37,6 +38,7 @@ alias cls='clear'
 alias so='source'
 
 alias diff='colordiff'
+
 #alias tail='tail'
 
 vman()

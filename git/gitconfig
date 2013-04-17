@@ -22,6 +22,7 @@
 	di = diff
 	dic = diff --cached
 	glog = log --graph
+	mlog = log --stat --summary
 	h = help
 	mg = merge
 	rb = rebase
