@@ -26,6 +26,7 @@ libssl-doc
 sqlite3
 libsqlite3-dev
 unrar
+autoconf
 cmake
 gawk
 bison
@@ -109,3 +110,10 @@ python-scapy
 python-gnuplot
 python-pyx
 man2html
+python-beautifulsoup
+python-paramiko
+python-sqlalchemy
+python-xlrd
+python-xlwt
+python3-chardet
+python3-sqlalchemy

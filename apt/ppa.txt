@@ -1,4 +1,6 @@
 ppa:tualatrix/ppa
 ppa:ubuntu-toolchain-r/test
+ppa:h-rayflood/llvm
+ppa:chris-lea/node.js
 ppa:mozillateam/firefox-next
 ppa:webupd8team/sublime-text-2
