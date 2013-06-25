@@ -110,3 +110,6 @@ sudo-command-line()
 	zle end-of-line
 }
 zle -N sudo-command-line
+
+# go
+[[ -f "/usr/local/go/misc/zsh/go" ]] && source /usr/local/go/misc/zsh/go

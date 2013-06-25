@@ -25,7 +25,7 @@ export  VAR="$APP/var"
 hash -d VAR="$VAR"
 
 export  VARLOG="$VAR/log"
-hash -d VARLOG="$VARLOG"
+hash -d LOG="$VARLOG"
 
 export  UFRAME="$APP/prods/uframe"
 hash -d UFRAME="$UFRAME"
@@ -38,6 +38,9 @@ hash -d UTELLER="$UTELLER"
 
 export  CNAPS="$APP/prods/cnaps"
 hash -d CNAPS="$CNAPS"
+
+export  NPS="$APP/prods/nps"
+hash -d NPS="$NPS"
 
 export  OTHER="$APP/prods/other"
 hash -d OTHER="$OTHER"
