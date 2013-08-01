@@ -33,6 +33,9 @@ hash -d UFRAME="$UFRAME"
 export  UPLATFORM="$APP/prods/uplatform"
 hash -d UPLATFORM="$UPLATFORM"
 
+export  UTEST="$APP/prods/utest"
+hash -d UTEST="$UTEST"
+
 export  UTELLER="$APP/prods/uteller"
 hash -d UTELLER="$UTELLER"
 

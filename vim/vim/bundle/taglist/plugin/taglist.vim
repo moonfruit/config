@@ -1496,7 +1496,7 @@ function! s:Tlist_Window_Exit_Only_Window()
                 " the window size will not be restored back to the original
                 " size.
                 bdelete
-		quit
+		quit!
 	    else
 		" More than one tab page is present. Close only the current
 		" tab page
@@ -4191,6 +4191,9 @@ endfunction
 " Open the window only when files present in any of the Vim windows support
 " tags.
 function! s:Tlist_Window_Check_Auto_Open()
+	if winnr('$') > 1
+		return
+	endif
     let open_window = 0
 
     let i = 1

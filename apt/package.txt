@@ -33,8 +33,6 @@ bison
 flex
 g++
 gobjc
-clang
-libclang-dev
 colordiff
 colorgcc
 tree
@@ -117,3 +115,6 @@ python-xlrd
 python-xlwt
 python3-chardet
 python3-sqlalchemy
+git-svn
+python-cffi
+python3-cffi
