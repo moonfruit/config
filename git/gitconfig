@@ -16,6 +16,9 @@
 	name = ours merge driver
 	driver = true
 
+[push]
+	default = simple
+
 [alias]
 	br = branch
 	ci = commit
