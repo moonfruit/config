@@ -26,6 +26,8 @@ libssl-doc
 sqlite3
 libsqlite3-dev
 unrar
+libtool
+automake
 autoconf
 cmake
 gawk
