@@ -19,6 +19,11 @@
 [push]
 	default = simple
 
+#[https]
+#	proxy = https://dkmoonfruit:QAZ@wsx3EDC@192.168.77.1:8085
+#[http]
+#	proxy = http://dkmoonfruit:QAZ@wsx3EDC@192.168.77.1:8085
+
 [alias]
 	br = branch
 	ci = commit
