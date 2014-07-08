@@ -27,7 +27,8 @@
 	st = status
 	un = reset HEAD --
 	sb = submodule
-	pa = pull --recurse-submodules -u
+	pusha = push --recurse-submodules=on-demand
+	pulla = pull --recurse-submodules -u
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
