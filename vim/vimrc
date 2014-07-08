@@ -142,9 +142,9 @@ command Bash ConqueTerm bash
 let python_highlight_all=1
 
 " putty
-if $PUTTY != ""
+if $PUTTY != "" || $TERM == "xterm-256color"
 	set t_Co=256
-	colorscheme desert
+	colorscheme darkburn
 endif
 
 if has('mac')
