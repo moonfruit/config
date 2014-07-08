@@ -43,6 +43,7 @@ syn region  gitcommitUntracked	start=/^# 未跟踪的文件:/ end=/^#$\|^#\@!/ c
 syn match   gitcommitUntrackedFile  "\t\@<=.*"	contained
 
 syn region  gitcommitDiscarded	start=/^# Change\%(s not staged for commit\|d but not updated\):/ end=/^#$\|^#\@!/ contains=gitcommitHeader,gitcommitHead,gitcommitDiscardedType fold
+syn region  gitcommitDiscarded	start=/^# 尚未暂存以备提交的变更：/ end=/^#$\|^#\@!/ contains=gitcommitHeader,gitcommitHead,gitcommitDiscardedType fold
 syn region  gitcommitSelected	start=/^# Changes to be committed:/ end=/^#$\|^#\@!/ contains=gitcommitHeader,gitcommitHead,gitcommitSelectedType fold
 syn region  gitcommitSelected	start=/^# 要提交的变更：/ end=/^#$\|^#\@!/ contains=gitcommitHeader,gitcommitHead,gitcommitSelectedType fold
 syn region  gitcommitUnmerged	start=/^# Unmerged paths:/ end=/^#$\|^#\@!/ contains=gitcommitHeader,gitcommitHead,gitcommitUnmergedType fold
