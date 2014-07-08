@@ -27,6 +27,7 @@
 	st = status
 	un = reset HEAD --
 	sb = submodule
+	sbs = submodule status
 	pusha = push --recurse-submodules=on-demand
 	pulla = pull -u --recurse-submodules
 
