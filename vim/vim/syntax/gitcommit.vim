@@ -2,7 +2,7 @@
 " Language:	git commit file
 " Maintainer:	Tim Pope <vimNOSPAM@tpope.org>
 " Filenames:	*.git/COMMIT_EDITMSG
-" Last Change:	2010 May 21
+" Last Change:	2013 May 30
 
 if exists("b:current_syntax")
   finish
@@ -17,7 +17,7 @@ if has("spell")
 endif
 
 syn include @gitcommitDiff syntax/diff.vim
-syn region gitcommitDiff start=/\%(^diff --\%(git\|cc\|combined\) \)\@=/ end=/^$\|^#\@=/ contains=@gitcommitDiff
+syn region gitcommitDiff start=/\%(^diff --\%(git\|cc\|combined\) \)\@=/ end=/^\%(diff --\|$\|#\)\@=/ fold contains=@gitcommitDiff
 
 syn match   gitcommitFirstLine	"\%^[^#].*"  nextgroup=gitcommitBlank skipnl
 syn match   gitcommitSummary	"^.\{0,50\}" contained containedin=gitcommitFirstLine nextgroup=gitcommitOverflow contains=@Spell
@@ -29,10 +29,10 @@ syn match   gitcommitOnBranch	"\%(^# \)\@<=On branch" contained containedin=gitc
 syn match   gitcommitOnBranch	"\%(^# \)\@<=位于分支" contained containedin=gitcommitComment nextgroup=gitcommitBranch skipwhite
 syn match   gitcommitOnBranch	"\%(^# \)\@<=Your branch .\{-\} '" contained containedin=gitcommitComment nextgroup=gitcommitBranch skipwhite
 syn match   gitcommitOnBranch	"\%(^# \)\@<=您的分支.\{-\} '" contained containedin=gitcommitComment nextgroup=gitcommitBranch skipwhite
-syn match   gitcommitBranch	"[^ \t']\+" contained
+syn match   gitcommitBranch	"[^ ']\+" contained
 syn match   gitcommitNoBranch	"\%(^# \)\@<=Not currently on any branch." contained containedin=gitcommitComment
 syn match   gitcommitNoBranch	"\%(^# \)\@<=当前不在任何分支上。" contained containedin=gitcommitComment
-syn match   gitcommitHeader	"\%(^# \)\@<=.*[:：]$"	contained containedin=gitcommitComment
+syn match   gitcommitHeader	"\%(^# \)\@<=.*:$"	contained containedin=gitcommitComment
 syn region  gitcommitAuthor	matchgroup=gitCommitHeader start=/\%(^# \)\@<=\%(Author\|Committer\):/ end=/$/ keepend oneline contained containedin=gitcommitComment transparent
 syn region  gitcommitAuthor	matchgroup=gitCommitHeader start=/\%(^# \)\@<=\%(作者\|提交者\):/ end=/$/ keepend oneline contained containedin=gitcommitComment transparent
 syn match   gitcommitNoChanges	"\%(^# \)\@<=No changes$" contained containedin=gitcommitComment
@@ -42,8 +42,7 @@ syn region  gitcommitUntracked	start=/^# Untracked files:/ end=/^#$\|^#\@!/ cont
 syn region  gitcommitUntracked	start=/^# 未跟踪的文件:/ end=/^#$\|^#\@!/ contains=gitcommitHeader,gitcommitHead,gitcommitUntrackedFile fold
 syn match   gitcommitUntrackedFile  "\t\@<=.*"	contained
 
-syn region  gitcommitDiscarded	start=/^# Changes not staged for commit:/ end=/^#$\|^#\@!/ contains=gitcommitHeader,gitcommitHead,gitcommitDiscardedType fold
-syn region  gitcommitDiscarded	start=/^# 尚未暂存以备提交的变更：/ end=/^#$\|^#\@!/ contains=gitcommitHeader,gitcommitHead,gitcommitDiscardedType fold
+syn region  gitcommitDiscarded	start=/^# Change\%(s not staged for commit\|d but not updated\):/ end=/^#$\|^#\@!/ contains=gitcommitHeader,gitcommitHead,gitcommitDiscardedType fold
 syn region  gitcommitSelected	start=/^# Changes to be committed:/ end=/^#$\|^#\@!/ contains=gitcommitHeader,gitcommitHead,gitcommitSelectedType fold
 syn region  gitcommitSelected	start=/^# 要提交的变更：/ end=/^#$\|^#\@!/ contains=gitcommitHeader,gitcommitHead,gitcommitSelectedType fold
 syn region  gitcommitUnmerged	start=/^# Unmerged paths:/ end=/^#$\|^#\@!/ contains=gitcommitHeader,gitcommitHead,gitcommitUnmergedType fold
