@@ -26,6 +26,8 @@
 	ss = stash
 	st = status
 	un = reset HEAD --
+	sb = submodule
+	pa = pull --recurse-submodules -u
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
