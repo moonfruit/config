@@ -11,8 +11,8 @@ tags
 .git
 .hg
 CVS
-*.o
-*.a
+*.[oa]
 *.so
+*.dylib
 *.pyc
 *.log
