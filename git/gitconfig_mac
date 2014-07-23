@@ -12,6 +12,9 @@
 [push]
 	default = simple
 
+[http]
+	sslVerify = false
+
 [alias]
 	br = branch
 	ci = commit
@@ -31,6 +34,10 @@
 	pusha = push --recurse-submodules=on-demand
 	pulla = pull -u --recurse-submodules
 
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -38,6 +45,3 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-
-[http]
-	sslVerify = false
