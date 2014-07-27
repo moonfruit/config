@@ -14,5 +14,6 @@ CVS
 *.[oa]
 *.so
 *.dylib
+*.luac
 *.pyc
 *.log
