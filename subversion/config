@@ -90,7 +90,7 @@ diff-cmd = colordiff
 global-ignores = *.o *.lo *.la *.al .libs *.so *.so.[0-9]* *.a *.pyc *.pyo
    *.rej *~ #*# .#* .*.swp .DS_Store Icon* *.dylib *.luac
    *.swp .git .hg CVS .gitignore *.tmp afiedt.buf
-   ~$*.xls?
+   ~$*.xls? ~$*.doc?
 ### Set log-encoding to the default encoding for log messages
 # log-encoding = latin1
 ### Set use-commit-times to make checkout/update/switch/revert
