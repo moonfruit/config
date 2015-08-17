@@ -32,7 +32,7 @@
 	sb = submodule
 	sbs = submodule status
 	pusha = push --recurse-submodules=on-demand
-	pulla = pull -u --recurse-submodules
+	pulla = pull --recurse-submodules
 
 [filter "media"]
 	clean = git-media-clean %f
