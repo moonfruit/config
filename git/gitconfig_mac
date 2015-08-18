@@ -6,7 +6,7 @@
 	ui = auto
 
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/moon/.gitignore
 	quotepath = false
 
 [push]
@@ -43,7 +43,7 @@
 	path = 
 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Users/moon/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [filter "lfs"]
 	clean = git-lfs clean %f
