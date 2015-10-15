@@ -102,6 +102,7 @@ set showmatch
 " map F2 to switch off highlighting for search
 nmap <silent> <F2> :nohlsearch<CR>
 
+
 " map space to control folding
 set foldenable
 set foldmethod=marker
@@ -160,3 +161,18 @@ endif
 if has('gui_running')
 	set lines=36 columns=132
 endif
+
+function s:xxd()
+	if &modifiable || !&readonly
+		if &filetype == "xxd"
+			%!xxd -r
+			let &filetype=b:xxd_filetype
+		else
+			let b:xxd_filetype=&filetype
+			%!xxd
+			set filetype=xxd
+		endif
+	endif
+endfunction
+
+nmap <silent> <F3> :call <SID>xxd()<CR>
