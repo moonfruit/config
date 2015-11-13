@@ -34,6 +34,14 @@
 	pusha = push --recurse-submodules=on-demand
 	pulla = pull --recurse-submodules
 
+[credential]
+	helper = osxkeychain
+
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
@@ -42,12 +50,6 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 
-[credential]
-	helper = osxkeychain
 [mergetool "sourcetree"]
 	cmd = /Users/moon/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
