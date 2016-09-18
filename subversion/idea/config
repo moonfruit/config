@@ -36,12 +36,12 @@
 ###   This will override the compile-time default, which is to use
 ###   Subversion's internal diff implementation.
 # diff-cmd = diff_program (diff, gdiff, etc.)
-diff-cmd = /usr/local/bin/colordiff
+# diff-cmd = /usr/local/bin/colordiff
 ### Diff-extensions are arguments passed to an external diff
 ### program or to Subversion's internal diff implementation.
 ### Set diff-extensions to override the default arguments ('-u').
 # diff-extensions = -u -p
-diff-extensions = -b
+# diff-extensions = -b
 ### Set diff3-cmd to the absolute path of your 'diff3' program.
 ###   This will override the compile-time default, which is to use
 ###   Subversion's internal diff3 implementation.
@@ -89,7 +89,7 @@ diff-extensions = -b
 # global-ignores = *.o *.lo *.la *.al .libs *.so *.so.[0-9]* *.a *.pyc *.pyo
 #   *.rej *~ #*# .#* .*.swp .DS_Store
 global-ignores = *.o *.lo *.la *.al .libs *.so *.so.[0-9]* *.a *.pyc *.pyo
-   *.rej *~ #*# .#* .*.swp .DS_Store *.dylib *.luac *.class
+   *.rej *~ #*# .#* .*.swp .DS_Store Icon* *.dylib *.luac *.class
    *.swp .git .hg CVS .gitignore *.tmp afiedt.buf *.iml *.log
    ~$*.xls? ~$*.doc?
 ### Set log-encoding to the default encoding for log messages
