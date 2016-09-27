@@ -135,6 +135,9 @@ let Tlist_WinWidth=34                   "设定taglist窗口宽度
 let Tlist_Inc_Winwidth=0                "设定编辑窗口宽度
 let Tlist_Enable_Fold_Column=0          "不要显示折叠树
 
+" clang
+let g:clang_library_path="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib"
+
 " couque
 command Bash ConqueTerm bash
 
