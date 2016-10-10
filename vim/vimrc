@@ -117,7 +117,7 @@ noremap! <M-l> <Right>
 " statusline
 set laststatus=2
 highlight User1 term=inverse,bold cterm=inverse,bold ctermfg=red
-set statusline=%f\ %1*%m%*%<%h%w%r%y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}%=%-9.([%03b]%)%-10.([0x%02B]%)%-19.(%-13.(%l,%c%V%)\ %P%)
+set statusline=%f\ %1*%m%*%<%h%w%r%y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}\ %#warningmsg#%{SyntasticStatuslineFlag()}%*%=%-9.([%03b]%)%-10.([0x%02B]%)%-19.(%-13.(%l,%c%V%)\ %P%)
 
 " undo
 set undofile
@@ -143,6 +143,15 @@ command Bash ConqueTerm bash
 
 " pyflakes
 let python_highlight_all=1
+
+" syntastic
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=0
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=1
+
+" you&me
+let g:ycm_confirm_extra_conf=0
 
 " putty
 if $PUTTY != "" || $TERM == "xterm-256color"
