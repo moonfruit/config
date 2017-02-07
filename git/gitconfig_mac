@@ -37,6 +37,12 @@
 [credential]
 	helper = osxkeychain
 
+[url "persistent-https"]
+	insteadof = https
+
+[url "persistent-http"]
+	insteadof = http
+
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
