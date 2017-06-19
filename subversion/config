@@ -52,7 +52,7 @@ diff-extensions = -b
 ### Set merge-tool-cmd to the command used to invoke your external
 ### merging tool of choice. Subversion will pass 5 arguments to
 ### the specified command: base theirs mine merged wcfile
-# merge-tool-cmd = merge_command
+merge-tool-cmd = /Users/moon/Documents/Environment/bin/ideasvn
 
 ### Section for configuring tunnel agents.
 [tunnels]
