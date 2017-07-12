@@ -7,6 +7,8 @@
 [core]
 	excludesfile = /Users/moon/.gitignore
 	quotepath = false
+	autocrlf = input
+	pager = less -x5,9
 
 [push]
 	default = simple
@@ -42,15 +44,14 @@
 [url "persistent-http"]
 	insteadof = http
 
-[merge]
-    tool = idea
-
 [mergetool "idea"]
     cmd = /usr/local/bin/idea merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
-    trustExitCode = true
 
 [difftool "idea"]
     cmd = /usr/local/bin/idea diff "$LOCAL" "$REMOTE"
+
+[merge]
+	tool = idea
 
 [filter "lfs"]
 	clean = git-lfs clean %f
