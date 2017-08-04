@@ -32,6 +32,7 @@
 	un = reset HEAD --
 	sb = submodule
 	sbs = submodule status
+	rpo = remote prune origin
 	pusha = push --recurse-submodules=on-demand
 	pulla = pull --recurse-submodules
 
@@ -45,10 +46,10 @@
 	insteadof = http
 
 [mergetool "idea"]
-    cmd = /usr/local/bin/idea merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+	cmd = /usr/local/bin/idea merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
 
 [difftool "idea"]
-    cmd = /usr/local/bin/idea diff "$LOCAL" "$REMOTE"
+	cmd = /usr/local/bin/idea diff "$LOCAL" "$REMOTE"
 
 [merge]
 	tool = idea
